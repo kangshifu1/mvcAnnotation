@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name>YKKJContext</display-name>	
+  <servlet>
+  	<servlet-name>all</servlet-name>
+  	<servlet-class>com.ykkj.control.YKKJBaseControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>all</servlet-name>
+  	<url-pattern>*.do</url-pattern>
+  </servlet-mapping> 
+   	<context-param>
+ 		<param-name>ykkjxml</param-name>
+		<!-- <param-value>/WEB-INF/classes/ykkj-config.xml</param-value> -->
+		<param-value>com.ykkj.demo.vo</param-value>
+ 	</context-param>
+  	<listener>
+  		<display-name>ApplicationXmlLisenter</display-name>
+  		<listener-class>com.ykkj.Lisenter.ApplicationXmlLisenter</listener-class>
+  	</listener>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

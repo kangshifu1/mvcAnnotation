@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ykkjs>
+	<ykkj-beans>
+		<ykkj name="login" class="com.ykkj.demo.vo.LoginForm"></ykkj>
+		
+	</ykkj-beans>
+	<url-mapping>
+		<url name="login" type="com.ykkj.demo.control.LoginControl" path="/login">
+			<forward name="success" value="/user/success.jsp"></forward>			
+			<forward name="fail" value="/user/fail.jsp"></forward>
+		</url>
+	</url-mapping>
+</ykkjs>
